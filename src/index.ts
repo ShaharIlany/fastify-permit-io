@@ -8,13 +8,10 @@ declare module "fastify" {
 }
 
 const FastifyPermitio = fastifyPlugin(
-  async function fileBasedRoutingPlugin(
-    fastify,
-    config: Partial<IPermitConfig>
-  ) {
+  (fastify, config: Partial<IPermitConfig>, done) => {
     const permit = new Permit(config);
     fastify.decorate("permit", permit);
-    fastify.ready();
+    done();
   },
   {
     fastify: "5.x",
