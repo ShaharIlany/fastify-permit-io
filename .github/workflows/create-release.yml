@@ -40,6 +40,14 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull latest changes and tags
+        run: |
+          git fetch --all --tags
+          git checkout main
+          git pull
 
       - name: Install dependencies
         run: bun i
