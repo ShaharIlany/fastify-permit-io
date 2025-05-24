@@ -47,10 +47,7 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Install npm
-        uses: actions/setup-node@v4
-
       - name: Publish
-        run: npm publish
+        run: bun publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
