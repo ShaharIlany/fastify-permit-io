@@ -1,6 +1,6 @@
 {
   "name": "fastify-permit-io",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Fastify plugin for Permit.io integration",
   "type": "module",
   "main": "dist/index.js",
