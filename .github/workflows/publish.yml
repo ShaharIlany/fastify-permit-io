@@ -1,13 +1,13 @@
 name: Publish to npm
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Create Release"]
+    types:
+      - completed
 
 jobs:
   release:
-    if: "contains(github.event.head_commit.message, '[publish]')"
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code

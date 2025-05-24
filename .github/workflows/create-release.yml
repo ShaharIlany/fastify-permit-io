@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    if: "!contains(github.event.head_commit.message, '[publish]')"
+    if: "!contains(github.event.head_commit.message, '[skip release]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -15,7 +15,7 @@ jobs:
       - name: Bump version
         id: bump_version
         run: |
-          echo new_tag=$(npm version patch -m "chore(release): bump version to %s [publish]") >> $GITHUB_OUTPUT
+          echo new_tag=$(npm version patch -m "chore(release): bump version to %s [skip release]") >> $GITHUB_OUTPUT
         env:
           GIT_AUTHOR_NAME: github-actions
           GIT_AUTHOR_EMAIL: github-actions@github.com
