@@ -2,7 +2,10 @@ import fastifyPlugin from "fastify-plugin";
 import { Permit, type IPermitConfig } from "permitio";
 
 const FastifyPermitio = fastifyPlugin(
-  async function fileBasedRoutingPlugin(fastify, config: IPermitConfig) {
+  async function fileBasedRoutingPlugin(
+    fastify,
+    config: Partial<IPermitConfig>
+  ) {
     const permit = new Permit(config);
     fastify.decorate("permit", permit);
     fastify.ready();
