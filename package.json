@@ -1,0 +1,39 @@
+{
+  "name": "fastify-permit-io",
+  "version": "1.0.0",
+  "description": "Fastify plugin for Permit.io integration",
+  "module": "index.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaharIlany/fastify-permit-io.git"
+  },
+  "keywords": [
+    "fastify",
+    "permitio",
+    "rebac",
+    "rbac",
+    "abac",
+    "permissions",
+    "authorization",
+    "auth",
+    "secure"
+  ],
+  "author": "Shahar Ilany",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShaharIlany/fastify-permit-io/issues"
+  },
+  "homepage": "https://github.com/ShaharIlany/fastify-permit-io#readme",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "fastify": "^5.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "fastify-plugin": "^5.0.1",
+    "permitio": "^2.7.4"
+  }
+}
