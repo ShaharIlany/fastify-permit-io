@@ -1,6 +1,12 @@
 import fastifyPlugin from "fastify-plugin";
 import { Permit, type IPermitConfig } from "permitio";
 
+declare module "fastify" {
+  interface FastifyInstance {
+    permit: Permit;
+  }
+}
+
 const FastifyPermitio = fastifyPlugin(
   async function fileBasedRoutingPlugin(
     fastify,
