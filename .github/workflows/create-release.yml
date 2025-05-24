@@ -50,4 +50,4 @@ jobs:
       - name: Publish
         run: bun publish --registry https://registry.npmjs.org/ --access public
         env:
-          NPM_CONFIG_TOKEN: ${{secrets.NPM_CONFIG_TOKEN}}
+          BUN_AUTH_TOKEN: ${{secrets.NPM_CONFIG_TOKEN}}
