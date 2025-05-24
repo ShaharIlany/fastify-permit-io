@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ShaharIlany/fastify-permit-io#readme",
   "scripts": {
-    "build": "bun ./build.ts"
+    "build": "bun ./src/build.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
