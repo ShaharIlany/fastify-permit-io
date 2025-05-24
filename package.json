@@ -1,10 +1,10 @@
 {
   "name": "fastify-permit-io",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Fastify plugin for Permit.io integration",
-  "module": "index.ts",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShaharIlany/fastify-permit-io.git"
@@ -27,10 +27,11 @@
   },
   "homepage": "https://github.com/ShaharIlany/fastify-permit-io#readme",
   "scripts": {
-    "build": "bun build index.ts --outdir=dist --format=cjs --minify"
+    "build": "bun ./build.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "bun-plugin-dts": "^0.3.0",
     "fastify": "^5.3.3"
   },
   "peerDependencies": {
